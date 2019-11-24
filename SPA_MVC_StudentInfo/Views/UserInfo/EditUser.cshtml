@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "EditUser";
+}
+
+<h2>EditUser</h2>
+
+<table>
+    <tr>
+        <td>First_Name</td>
+        <td><input type="text" ng-model="User.First_Name" />  </td>
+    </tr>
+    <tr>
+        <td>Last_Name</td>
+        <td><input type="text" ng-model="User.Last_Name" />  </td>
+    </tr>
+    <tr>
+        <td>Employee_ID</td>
+        <td><input type="text" ng-model="User.Employee_ID" />  </td>
+    </tr>
+    <tr>
+        <td>User_ID</td>
+        <td><input type="text" ng-model="User.User_ID" />  </td>
+    </tr>
+
+</table>
+<input type="button" value="Save" ng-click="save()" />
+<div>{{error}}</div>

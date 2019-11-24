@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "DeleteUser";
+}
+<h2>DeleteUser</h2>
+<table>
+    <tr>
+        <td>First_Name</td>
+        <td>{{User.First_Name}}</td>
+    </tr>
+    <tr>
+        <td>Last_Name</td>
+        <td>{{User.Last_Name}}</td>
+    </tr>
+    <tr>
+        <td>Employee_ID</td>
+        <td>{{User.Employee_ID}}</td>
+    </tr>
+    <tr>
+        <td>User_ID</td>
+        <td>{{User.User_ID}}</td>
+    </tr>
+
+</table>
+<input type="button" value="Delete" ng-click="delete()" />

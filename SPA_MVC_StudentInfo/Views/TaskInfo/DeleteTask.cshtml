@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "DeleteTask";
+}
+<h2>DeleteTask</h2>
+<table>
+    <tr>
+        <td>Task</td>
+        <td>{{Task.Task_ID}}</td>
+    </tr>
+    <tr>
+        <td>Parent Task</td>
+        <td>{{Task.Parent_Task}}</td>
+    </tr>
+    <tr>
+        <td>Priority</td>
+        <td>{{Task.Priority}}</td>
+    </tr>
+    <tr>
+        <td>Start</td>
+        <td>{{Task.Start_Date}}</td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td>{{Task.End_Date}}</td>
+    </tr>
+</table>
+<input type="button" value="Delete" ng-click="delete()" />

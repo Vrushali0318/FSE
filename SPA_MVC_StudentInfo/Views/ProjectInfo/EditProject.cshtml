@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "EditProject";
+}
+
+<h2>EditProject</h2>
+<table>
+    <tr>
+        <td>Project_ID</td>
+        <td><input type="text" ng-model="Project.Project_ID" />  </td>
+    </tr>
+    <tr>
+        <td>Project</td>
+        <td><input type="text" ng-model="Project.Project1" />  </td>
+    </tr>
+    <tr>
+        <td>Start Date</td>
+        <td><input type="date" ng-model="Project.Start_Date" />  </td>
+    </tr>
+    <tr>
+        <td>End Date</td>
+        <td><input type="date" ng-model="Project.End_Date" />  </td>
+    </tr>
+    <tr>
+        <td>Priority</td>
+        <td><input type="range" ng-model="Project.Priority" min="0" max="30" />  </td>
+    </tr>
+</table>
+<input type="button" value="Save" ng-click="save()" />
+<div>{{error}}</div>
