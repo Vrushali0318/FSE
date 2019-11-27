@@ -16,6 +16,7 @@
     <RootNamespace>SPA_MVC_StudentInfo</RootNamespace>
     <AssemblyName>SPA_MVC_StudentInfo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+	<DeployManagedRuntimeVersion>v4.0</DeployManagedRuntimeVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />

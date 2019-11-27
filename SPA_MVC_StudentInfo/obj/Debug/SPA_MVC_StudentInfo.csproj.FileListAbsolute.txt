@@ -252,7 +252,6 @@ C:\Users\Admin\Desktop\169937_Final\CC\New folder\SPAMVCStudentInfo\FinalSubmiss
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\NUnit3.TestAdapter.dll
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\nunit.engine.dll
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\nunit.engine.api.dll
-C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\SPA_MVC_StudentInfo.dll.config
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\SPA_MVC_StudentInfo.dll
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\SPA_MVC_StudentInfo.pdb
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\Antlr3.Runtime.dll

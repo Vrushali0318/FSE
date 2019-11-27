@@ -1,0 +1,17 @@
+1.Open below solution/Application in VS2017
+C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo.sln
+2.Run DB script given in same folder
+3.Build the application
+3.Change required DB connection and Run the application
+4.Click on "Add User"  button and add new user
+5.After that click on "View User" 
+6."View Project" and "View User" used to show user and project details
+7.For search select any column from dropdown and enter value
+8.For sort click on columns
+9. Jenkins.war file -> run cmd from C:\169937_FinalFSEProject\Jenkins and give command 
+java -jar jenkins.war --httpPort=9090
+ user id - FSEAdmin
+ pass - Admin
+10.GitHub - https://github.com/Vrushali0318/FSE.git
+11.169937_Assignment_Delivarables.docx having all the screenshots taken for above.
+12.Screenshots for ReviewComments.docx having all the screenshots taken for review comments given

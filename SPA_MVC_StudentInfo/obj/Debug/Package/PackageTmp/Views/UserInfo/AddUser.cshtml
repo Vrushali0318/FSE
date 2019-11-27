@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Add New User";
+}
+<table><tr><td height="10px"></td></tr></table>
+
+<table cellpadding="4" cellspacing="4" width="70%" align="center" style="background-color: skyblue;
+border:solid 2px red; padding-top:20px;">
+    <tr>
+        <td colspan="3" style="background-color:gray; font-size:18pt;
+font-weight:bold; height:30px; text-align:center;">
+            Add New User
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">User ID</td>
+        <td><input type="text" ng-model="User_ID" readonly/>  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">First Name</td>
+        <td><input type="text" ng-model="First_Name" />  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Last Name</td>
+        <td><input type="text" ng-model="Last_Name" />  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Employee ID</td>
+        <td><input type="text" ng-model="Employee_ID" />  </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="Save" data-ng-click="checkErr(First_Name,Last_Name,Employee_ID) && save()" />
+            <input type="button" value="Reset" data-ng-click="reset()" />
+        </td>
+    </tr>
+
+</table>
+
+<span class="label label-danger">{{errMessage}}</span>

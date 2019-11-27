@@ -1,0 +1,65 @@
+﻿<h2>List of Projects</h2>
+<br />
+<div ng-app="ngmodule">
+    <div ng-controller="ShowProjectsController">
+        <table class="table table-bordered table-condensed">
+            <tr>
+                <td>Search</td>
+                <td>
+                    <select ng-model="SelectedCriteria" ng-options="S for S in Selectors"></select>
+                </td>
+                <td>Enter Search Value:</td>
+                <td>
+                    <input type="text" ng-model="filterValue" class="form-control" ng-change="getFilteredData()" />
+                </td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered" ng-show="IsVisible">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="#" ng-click="orderByField='Project_ID'; reverseSort = !reverseSort">
+                            Project_ID <span ng-show="orderByField == 'Project_ID'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='Project1'; reverseSort = !reverseSort">
+                            Project <span ng-show="orderByField == 'Project1'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='Start_Date'; reverseSort = !reverseSort">
+                            Start_Date<span ng-show="orderByField == 'Start_Date'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='End_Date'; reverseSort = !reverseSort">
+                            End_Date<span ng-show="orderByField == 'End_Date'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='Priority'; reverseSort = !reverseSort">
+                            Priority test<span ng-show="orderByField == 'Priority'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>           
+                <tr ng-repeat="project in Projects">
+                    <td>{{project.Project_ID}}</td>
+                    <td>{{project.Project1}}</td>
+                    <td>{{project.Start_Date}}</td>
+                    <td>{{project.End_Date}}</td>
+                    <td>{{project.Priority}}</td>
+                    <td><a ng-click="editProject(project.Project_ID)">Update</a></td>
+                    <td><a ng-click="deleteProject(project.Project_ID)">Suspend</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>{{error}}</div>
+
+    </div>
+</div>
+

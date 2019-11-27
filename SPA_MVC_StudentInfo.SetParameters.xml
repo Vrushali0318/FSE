@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/SPA_MVC_StudentInfo_deploy" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-SPA_MVC_StudentInfo-20141207111536.mdf;Initial Catalog=aspnet-SPA_MVC_StudentInfo-20141207111536;Integrated Security=True" />
+  <setParameter name="SchoolManagementEntities-Web.config Connection String" value="metadata=res://*/Models.ManageStudent.csdl|res://*/Models.ManageStudent.ssdl|res://*/Models.ManageStudent.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MYPC\SQLSERVER2K8;initial catalog=SchoolManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+  <setParameter name="FSE_ProjectEntities-Web.config Connection String" value="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DOTNET;initial catalog=FSE_Project;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+</parameters>

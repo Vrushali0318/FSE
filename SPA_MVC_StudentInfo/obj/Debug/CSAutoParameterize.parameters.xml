@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultvalue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-SPA_MVC_StudentInfo-20141207111536.mdf;Initial Catalog=aspnet-SPA_MVC_StudentInfo-20141207111536;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\169937_FinalFSEProject\\SPA_MVC_ProjectInfo\\SPA_MVC_StudentInfo\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="SchoolManagementEntities-Web.config Connection String" description="SchoolManagementEntities Connection String used in web.config by the application to access the database." defaultvalue="metadata=res://*/Models.ManageStudent.csdl|res://*/Models.ManageStudent.ssdl|res://*/Models.ManageStudent.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MYPC\SQLSERVER2K8;initial catalog=SchoolManagement;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\169937_FinalFSEProject\\SPA_MVC_ProjectInfo\\SPA_MVC_StudentInfo\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchoolManagementEntities']/@connectionString" />
+  </parameter>
+  <parameter name="FSE_ProjectEntities-Web.config Connection String" description="FSE_ProjectEntities Connection String used in web.config by the application to access the database." defaultvalue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DOTNET;initial catalog=FSE_Project;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\169937_FinalFSEProject\\SPA_MVC_ProjectInfo\\SPA_MVC_StudentInfo\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='FSE_ProjectEntities']/@connectionString" />
+  </parameter>
+</parameters>

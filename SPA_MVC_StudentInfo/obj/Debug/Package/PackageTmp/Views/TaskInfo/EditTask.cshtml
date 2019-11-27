@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "EditTask";
+}
+
+<h2>EditTask</h2>
+
+<table>
+    <tr>
+        <td>Task</td>
+        <td><input type="text" ng-model="Task.Task_ID" />  </td>
+    </tr>
+    <tr>
+        <td>Parent</td>
+        <td><input type="text" ng-model="Task.Parent_Task" />  </td>
+    </tr>
+    <tr>
+        <td>Priority</td>
+        <td><input type="range" ng-model="Priority" min="0" max="30" />  </td>
+    </tr>
+    <tr>
+        <td>Start</td>
+        <td><input type="date" ng-model="Task.Start_Date" />  </td>
+    </tr>
+    <tr>
+        <td>End</td>
+        <td><input type="date" ng-model="Task.End_Date" />  </td>
+    </tr>
+</table>
+<input type="button" value="Save" ng-click="save()" />
+<div>{{error}}</div>

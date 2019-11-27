@@ -1,0 +1,57 @@
+﻿<h2>List of Users</h2>
+<br />
+<div ng-app="ngmodule">
+    <div ng-controller="ShowUsersController">
+        <table class="table table-bordered table-condensed">
+            <tr>
+                <td>Search</td>
+                <td>
+                    <select ng-model="SelectedCriteria" ng-options="S for S in Selectors"></select>
+                </td>
+                <td>Enter Search Value:</td>
+                <td>
+                    <input type="text" ng-model="filterValue" class="form-control" ng-change="getFilteredData()" />
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered" ng-show="IsVisible">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="#" ng-click="orderByField='First_Name'; reverseSort = !reverseSort">
+                            First Name <span ng-show="orderByField == 'First_Name'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='Last_Name'; reverseSort = !reverseSort">
+                            Last Name <span ng-show="orderByField == 'Last_Name'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='Employee_ID'; reverseSort = !reverseSort">
+                            Employee_ID <span ng-show="orderByField == 'Employee_ID'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="orderByField='User_ID'; reverseSort = !reverseSort">
+                            User_ID <span ng-show="orderByField == 'User_ID'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in Users">
+                    <td>{{user.First_Name}}</td>
+                    <td>{{user.Last_Name}}</td>
+                    <td>{{user.Employee_ID}}</td>
+                    <td>{{user.User_ID}}</td>
+                    <td><a ng-click="editUser(user.User_ID)">Edit</a></td>
+                    <td><a ng-click="deleteUser(user.User_ID)">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>{{error}}</div>
+
+
