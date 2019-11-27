@@ -8,7 +8,7 @@ namespace SPA_MVC_StudentInfo.Controllers
 {
     public class UserInfoController : Controller
     {
-        // GET: UserInfo
+        // GET: UserInfo.....
         public ActionResult Index()
         {
             return View();

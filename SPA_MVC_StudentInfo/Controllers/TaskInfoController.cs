@@ -8,7 +8,7 @@ namespace SPA_MVC_StudentInfo.Controllers
 {
     public class TaskInfoController : Controller
     {
-        // GET: TaskInfo
+        // GET: TaskInfo...
         public ActionResult Index()
         {
             return View();

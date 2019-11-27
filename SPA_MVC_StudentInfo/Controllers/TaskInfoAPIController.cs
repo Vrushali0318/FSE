@@ -115,7 +115,7 @@ namespace SPA_MVC_StudentInfo.Controllers
 
             return Ok(task_Detail);
         }
-
+//Dispose
         protected override void Dispose(bool disposing)
         {
             if (disposing)

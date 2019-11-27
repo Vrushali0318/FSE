@@ -1,8 +1,8 @@
-1.Open below solution/Application in VS2017
+1.Open below solution in VS2017
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo.sln
-2.Run DB script given in same folder
-3.Build the application
-3.Change required DB connection and Run the application
+2.Run DB script given from same folder..
+3.Build the application.
+3.Change required DB connection and Run the application.
 4.Click on "Add User"  button and add new user
 5.After that click on "View User" 
 6."View Project" and "View User" used to show user and project details
