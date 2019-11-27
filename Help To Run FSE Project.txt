@@ -1,6 +1,6 @@
 1.Open below solution in VS2017
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo.sln
-2.Run DB script given from same folder.
+2.Run DB script given from same folder..
 3.Build the application.
 3.Change required DB connection and Run the application.
 4.Click on "Add User"  button and add new user
