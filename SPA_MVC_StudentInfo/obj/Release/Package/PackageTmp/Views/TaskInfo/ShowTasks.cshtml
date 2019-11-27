@@ -1,0 +1,31 @@
+﻿<h2>List of Tasks</h2>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Parent</th>
+            <th>Priority</th>
+            <th>Start</th>
+            <th>End</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr ng-repeat="task in Tasks">
+            <td>{{task.Task_ID}}</td>
+            <td>{{task.Parent_Task}}</td>
+            <td>{{task.Priority}}</td>
+            <td>{{task.Start_Date}}</td>
+            <td>{{task.End_Date}}</td>
+            <td><a ng-click="editTask(task.Task_ID)">Edit</a></td>
+            <td><a ng-click="deleteTask(task.Task_ID)">End Task</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<div>{{error}}</div>
+
+

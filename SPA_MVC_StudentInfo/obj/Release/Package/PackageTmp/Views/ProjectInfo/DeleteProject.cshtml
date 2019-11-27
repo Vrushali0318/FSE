@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "DeleteProject";
+}
+
+<h2>DeleteProject</h2>
+<table>
+    <tr>
+        <td>Project_Id</td>
+        <td>{{Project.Project_ID}}</td>
+    </tr>
+    <tr>
+        <td>Project</td>
+        <td>{{Project.Project1}}</td>
+    </tr>
+    <tr>
+        <td>Start Date</td>
+        <td>{{Project.Start_Date}}</td>
+    </tr>
+    <tr>
+        <td>End Date</td>
+        <td>{{Project.End_Date}}</td>
+    </tr>
+    <tr>
+        <td>Priority</td>
+        <td>{{Project.Priority}}</td>
+    </tr>
+</table>
+<input type="button" value="Delete" ng-click="delete()" />

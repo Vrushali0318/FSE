@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "SPA";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<body data-ng-app="ApplicationModule">
+    <div>
+        <div>
+            <div>
+                <table cellpadding="5" cellspacing="6" width="100%" style="background-color:whitesmoke; border:solid 4px green;">
+                    <tr>
+                        @*<td style="border: solid 1px gray; width:170px; text-align:center;"><a href="showstudents"> Show All Students </a></td>
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="addstudent"> Add New Student </a></td>*@
+
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="adduser"> Add New User </a></td>
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="addproject"> Add Project </a></td>
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="addtask"> Add Task </a></td>
+                        
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="showusers"> View User </a></td>
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="showprojects"> View Project </a></td>
+                        <td style="border: solid 1px gray; width:170px; text-align:center;"><a href="showtasks"> View Task </a></td>
+                        
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div data-ng-view></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/Module.js")"></script>
+
+<script src="~/MyScripts/Services.js"></script>
+<script src="~/MyScripts/TaskService.js"></script>
+<script src="~/MyScripts/UserService.js"></script>
+<script src="~/MyScripts/ProjectService.js"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowStudentsController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/AddStudentController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/EditStudentController.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteStudentController.js")"></script>
+    
+<script type="text/javascript" src="@Url.Content("~/MyScripts/AddUserController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/ShowUsersController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/EditUserController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteUserController.js")"></script>
+       
+<script type="text/javascript" src="@Url.Content("~/MyScripts/AddProjectController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/ShowProjectsController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteProjectController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/EditProjectController.js")"></script>
+    
+<script type="text/javascript" src="@Url.Content("~/MyScripts/AddTaskController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/ShowTasksController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/EditTaskController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteTaskController.js")"></script>
+
+
+}

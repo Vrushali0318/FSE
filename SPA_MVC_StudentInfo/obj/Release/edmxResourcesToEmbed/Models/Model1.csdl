@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FSE_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Parent_Task">
+    <Key>
+      <PropertyRef Name="Parent_ID" />
+    </Key>
+    <Property Name="Parent_ID" Type="Int32" Nullable="false" />
+    <Property Name="Parent_Task1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Task_Detail" Relationship="Self.FKParent_task_id" FromRole="Parent_Task" ToRole="Task_Detail" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Project_ID" />
+    </Key>
+    <Property Name="Project_ID" Type="Int32" Nullable="false" />
+    <Property Name="Project1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Start_Date" Type="DateTime" Precision="3" />
+    <Property Name="End_Date" Type="DateTime" Precision="3" />
+    <Property Name="Priorty" Type="Double" />
+    <NavigationProperty Name="Task_Detail" Relationship="Self.FKProject_id" FromRole="Project" ToRole="Task_Detail" />
+    <NavigationProperty Name="Users" Relationship="Self.FKProject_user_id" FromRole="Project" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Task_Detail">
+    <Key>
+      <PropertyRef Name="Task_ID" />
+    </Key>
+    <Property Name="Task_ID" Type="Int32" Nullable="false" />
+    <Property Name="Parent_ID" Type="Int32" />
+    <Property Name="Project_ID" Type="Int32" />
+    <Property Name="Task" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Start_Date" Type="DateTime" Precision="3" />
+    <Property Name="End_Date" Type="DateTime" Precision="3" />
+    <Property Name="Priorty" Type="Double" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Parent_Task" Relationship="Self.FKParent_task_id" FromRole="Task_Detail" ToRole="Parent_Task" />
+    <NavigationProperty Name="Project" Relationship="Self.FKProject_id" FromRole="Task_Detail" ToRole="Project" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_task_id" FromRole="Task_Detail" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="Task_ID" Type="Int32" />
+    <Property Name="Project_ID" Type="Int32" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_ID" Type="Int32" />
+    <NavigationProperty Name="Project" Relationship="Self.FKProject_user_id" FromRole="Users" ToRole="Project" />
+    <NavigationProperty Name="Task_Detail" Relationship="Self.FK_task_id" FromRole="Users" ToRole="Task_Detail" />
+  </EntityType>
+  <Association Name="FKParent_task_id">
+    <End Role="Parent_Task" Type="Self.Parent_Task" Multiplicity="0..1" />
+    <End Role="Task_Detail" Type="Self.Task_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent_Task">
+        <PropertyRef Name="Parent_ID" />
+      </Principal>
+      <Dependent Role="Task_Detail">
+        <PropertyRef Name="Parent_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKProject_id">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="Task_Detail" Type="Self.Task_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="Project_ID" />
+      </Principal>
+      <Dependent Role="Task_Detail">
+        <PropertyRef Name="Project_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKProject_user_id">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="Project_ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Project_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_task_id">
+    <End Role="Task_Detail" Type="Self.Task_Detail" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task_Detail">
+        <PropertyRef Name="Task_ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Task_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FSE_ProjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Parent_Task" EntityType="Self.Parent_Task" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="Task_Detail" EntityType="Self.Task_Detail" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FKParent_task_id" Association="Self.FKParent_task_id">
+      <End Role="Parent_Task" EntitySet="Parent_Task" />
+      <End Role="Task_Detail" EntitySet="Task_Detail" />
+    </AssociationSet>
+    <AssociationSet Name="FKProject_id" Association="Self.FKProject_id">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Task_Detail" EntitySet="Task_Detail" />
+    </AssociationSet>
+    <AssociationSet Name="FKProject_user_id" Association="Self.FKProject_user_id">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_task_id" Association="Self.FK_task_id">
+      <End Role="Task_Detail" EntitySet="Task_Detail" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
