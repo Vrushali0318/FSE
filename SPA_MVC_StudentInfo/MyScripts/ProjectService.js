@@ -11,7 +11,7 @@
         return $http.get("/api/ProjectInfoAPI/" + id);
     };
 
-    //Function to create new Project
+    //Function to create new Project post request
     this.post = function (Project) {
         var request = $http({
             method: "post",
