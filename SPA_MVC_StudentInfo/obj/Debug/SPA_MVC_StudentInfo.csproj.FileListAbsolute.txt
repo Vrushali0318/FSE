@@ -318,4 +318,3 @@ C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\obj\Debug\SPA_
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\obj\Debug\SPA_MVC_StudentInfo.pdb
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\NUnit3.TestAdapter.pdb
 C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\nunit.framework.pdb
-C:\169937_FinalFSEProject\SPA_MVC_ProjectInfo\SPA_MVC_StudentInfo\bin\SPA_MVC_StudentInfo.dll.config
