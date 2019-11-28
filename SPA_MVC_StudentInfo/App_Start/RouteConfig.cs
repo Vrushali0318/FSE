@@ -13,10 +13,22 @@ namespace SPA_MVC_StudentInfo
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "ManageStudentInfo", action = "Index", id = UrlParameter.Optional }
+            //);
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "ManageStudentInfo", action = "Index", id = UrlParameter.Optional }
+               "Default",
+               "{controller}/{action}/{id}",
+               new { action = "Index", id = UrlParameter.Optional }
+             );
+
+
+            routes.MapRoute(
+              "Root",
+              "",
+              new { controller = "ManageStudentInfo", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

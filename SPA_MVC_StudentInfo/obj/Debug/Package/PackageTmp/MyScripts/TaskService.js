@@ -1,5 +1,5 @@
 ﻿app.service('TaskService', function ($http) {
-    //**********----Get All Record----***************
+    //**********----Get All Record----******************
     var urlGet = '';
     this.getAll = function (apiRoute) {
         urlGet = apiRoute;
